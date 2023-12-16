@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <title>Mmw Photography</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+<body> 
+    <header>
+        <a href="#main" class="logo">MMW PHOTOGRAPHY</a>
+        <nav class="navigation">  
+            <a href="#AboutMe">About Me</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Contact">Contact</a>
+            <a href="/Users/walidmed/Desktop/WP-Project-20212022333-MohamedWalidMAZED 2/Page APPLY.html">Apply</a>
+        </nav>  
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+<!-- Menu Button -->
+<script>
+  $(document).ready(function() {
+    $('.menu-icon').click(function() {
+      $('.navigation').slideToggle('slow');
+    });
+  });
+</script>
+
+    </header>
+
+<!-- First page -->
+<section class="main">
+  <div>
+    <h2>Hello! I'm Walid<br><span id="title"></span></h2>
+    <h3>I'm enjoying my passion and taking photos</h3>
+    <a href="#Gallery" class="main-btn">View my work</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/mmwcc/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/mmwwalid/"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://vsco.co/mmwalid/gallery"><iconify-icon icon="simple-icons:vsco"></iconify-icon></a>
+      <a href="https://www.behance.net/dilawcriss"><i class="fa-brands fa-behance"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery Title -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#title').text('Freelancer Photographer');
+  });
+</script>
+
+<!-- Smooth Scrolling 
+<script>
+ //* $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+      event.preventDefault();
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    });
+  }); // 
+</script> -->
+
+<!-- updated section to AngularJS (About ME)-->
+<html ng-app="myApp">
+<head>
+  <title>ABOUT ME</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('myApp', [])
+      .controller('AboutMeController', function() {
+        var vm = this;
+        vm.aboutText = "I’m Walid! A freelancer photographer based in Istanbul, Turkey. I have loved photography since I was a teenager growing up in Algiers, Algeria. I have many experiences specialized in portrait photography, I worked in many events. I love to play video games, travel and enjoy everything beautiful. I’m a software engineer student In Nisantasi University, Turkey.";
+      });
+  </script>
+</head>
+<body>
+  <section id="AboutMe" ng-controller="AboutMeController as vm">
+    <img src="Images/Logo2.PNG" alt="logo2" class="logo2">
+    <div class="content-box"> 
+      <h2 class="title_About">About Me</h2>
+        <div class="content2">
+          <p>I’m Walid! A freelancer photographer based in Istanbul, Turkey. Specialized in portrait photography with extensive experience in various events. Passionate about video games, travel, and all things beautiful. Currently studying software engineering and working as a logo creator and designer too.</p>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+
+<!-- Skills-->
+  <section class="cards" id="Skills">
+    <h2 class="title">Skills</h2>
+    <div class="content">
+    <!-- first card -->  
+        <div class="card">
+            <div class="icon">
+                <iconify-icon icon="file-icons:adobe-lightroom"></iconify-icon>
+            </div>
+            <div class="info">
+                <h3>Adobe Lightroom</h3>
+                <p>Cropping, straightening, adjusting exposure, and sharpening. Touching up photos with Teeth Whiten, Blemish Remover, and more. Adding effects, textures, graphics, and words for creative looks</p>
+            </div>
+        </div> 
+
+
+<!-- second card -->
+        <div class="card">
+            <div class="icon">
+                <i class="fa-regular fa-eye"></i>
+            </div>
+            <div class="info">
+                <h3>Understanding the vision</h3>
+                <p>I have a clear vision and purpose in my photography, which I strive to capture and communicate through my work. I am always seeking to improve and evolve my understanding vision.</p>
+            </div>
+        </div>
+
+
+    <!-- third card -->
+        <div class="card">
+            <div class="icon">
+                <i class="fa-sharp fa-solid fa-image-portrait"></i>
+            </div>
+            <div class="info">
+                <h3>Portrait</h3>
+                <p>I have a strong background in portrait photography, with experience in lighting, posing, and composition techniques that help to create stunning and memorable images.</p>
+            </div>
+        </div>
+</div>
+  </section>
+
+<!-- Gallery -->
+<section class="photos" id="Gallery">
+  <h4 class="title3">G A L L E R Y</h4>
+  <div>
+      <a href="Images/01.jpg" data-lightbox="gallery" data-title="Image 1"><img id="img-gal" src="Images/01.jpg"></a>
+      <a href="Images/001.JPG" data-lightbox="gallery" data-title="Image 2"><img id="img-gal" src="Images/001.JPG"></a>
+      <a href="Images/002.JPG" data-lightbox="gallery" data-title="Image 3"><img id="img-gal" src="Images/002.JPG"></a>
+      <a href="Images/003.JPG" data-lightbox="gallery" data-title="Image 4"><img id="img-gal" src="Images/003.JPG"></a>
+      <a href="Images/004.JPG" data-lightbox="gallery" data-title="Image 5"><img id="img-gal" src="Images/004.JPG"></a>
+      <a href="Images/005.jpg" data-lightbox="gallery" data-title="Image 6"><img id="img-gal" src="Images/005.jpg"></a>
+      <a href="Images/006.JPG" data-lightbox="gallery" data-title="Image 7"><img id="img-gal" src="Images/006.JPG"></a>
+      <a href="Images/007.JPG" data-lightbox="gallery" data-title="Image 8"><img id="img-gal" src="Images/007.JPG"></a>
+      <a href="Images/008.JPG" data-lightbox="gallery" data-title="Image 9"><img id="img-gal" src="Images/008.JPG"></a>
+      <a href="Images/009.jpg" data-lightbox="gallery" data-title="Image 10"><img id="img-gal" src="Images/009.jpg"></a>
+      <a href="Images/010.jpg" data-lightbox="gallery" data-title="Image 11"><img id="img-gal" src="Images/010.jpg"></a>
+      <a href="Images/011.jpg" data-lightbox="gallery" data-title="Image 12"><img id="img-gal" src="Images/011.jpg"></a>
+      <a href="Images/012.jpg" data-lightbox="gallery" data-title="Image 13"><img id="img-gal" src="Images/012.jpg"></a>
+      <a href="Images/013.jpg" data-lightbox="gallery" data-title="Image 14"><img id="img-gal" src="Images/013.jpg"></a>
+      <a href="Images/014.jpg" data-lightbox="gallery" data-title="Image 15"><img id="img-gal" src="Images/014.jpg"></a>
+  </div>
+</section>
+<script>
+  // Lightbox (jquery)
+$(document).ready(function() {
+  $('.gallery-link').click(function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+  });
+});
+</script>
+  
+<!-- Contact -->
+
+<section class="cards contact" id="Contact">
+    <h2 class="title">Let's Work Together</h2>
+    <div class="content"></div>
+    <a href="sms:+905341234567">
+      <div class="card">
+        <div class="icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="info">
+          <h3>Phone</h3>
+          <p>+90(534)1234567</p>
+        </div>
+      </div>
+    </a>
+  
+    <a href="mailto:Mmedwalidcc@gmail.com">
+      <div class="card">
+        <div class="icon">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="info">
+          <h3>E-mail</h3>
+          <p>Mmedwalidcc@gmail.com</p>
+        </div>
+      </div>
+    </a>
+  </section> 
+
+
+<!-- Quote box -->
+
+  <div id="quote-box">
+    <p id="quote"></p>
+    <p id="author"></p>
+    <button id="new-quote">New Quote</button>
+  </div>
+
+<!-- Quotes generator Js -->
+<script>
+  const quotes = [
+  {
+    quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    author: "Nelson Mandela"
+  },
+  {
+    quote: "The way to get started is to quit talking and begin doing.",
+    author: "Walt Disney"
+  },
+  {
+    quote: "Your time is limited, don't waste it living someone else's life.",
+    author: "Steve Jobs"
+  },
+  {
+    quote: "If life were predictable it would cease to be life, and be without flavor.",
+    author: "Eleanor Roosevelt"
+  },
+  {
+    quote: "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+    author: "Oprah Winfrey"
+  }
+];
+
+const quoteElement = document.getElementById('quote');
+const authorElement = document.getElementById('author');
+const newQuoteButton = document.getElementById('new-quote');
+
+const getRandomQuote = () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+const updateQuote = () => {
+  const quote = getRandomQuote();
+  quoteElement.textContent = quote.quote;
+  authorElement.textContent = quote.author;
+}
+
+newQuoteButton.addEventListener('click', updateQuote);
+
+updateQuote();
+
+</script>  
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <p class="footer-title">Copyrights © <span>MMW PHOTOGRAPHY</span></p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/mmwcc/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/mmwwalid/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://vsco.co/mmwalid/gallery"><iconify-icon icon="simple-icons:vsco"></iconify-icon></a>
+        <a href="https://www.behance.net/dilawcriss"><i class="fa-brands fa-behance"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
